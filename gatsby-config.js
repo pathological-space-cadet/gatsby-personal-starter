@@ -6,5 +6,23 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
-}
+  plugins: [
+    {
+      resolve: "gatsby-plugin-postcss",
+      options: {
+        postCssPlugins: [
+          require("postcss-preset-env")({ stage: 0 }),
+          require("tailwindcss"),
+          require("autoprefixer")
+        ]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-purgecss",
+      options: {
+        printRejected: true,
+        tailwind: true
+      }
+    }
+  ]
+};

@@ -1,5 +1,11 @@
-import React from "react"
+// Global Asset Imports
+import "../styles/styles.css";
 
-export default function Home() {
-  return <div>Hello world!</div>
-}
+// Page imports
+import React from "react";
+
+// Components
+
+export default () => (
+  <p className="text-4xl font-bold text-center text-blue-400">Hello</p>
+);
